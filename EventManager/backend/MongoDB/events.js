@@ -10,19 +10,23 @@ const registrations = new mongoose.Schema( {
 const Schema = new mongoose.Schema(
     {
         eventName : {
-            type : String
+            type : String,
+            required : true
         },
         createBy : {
-            type : String
+            type : String,
+            required : true
         },
         eventDate : {
-            type : String
+            type : String,
+            required : true
         },
         department : {
-            type : String
+            type : String,
+            required : true
         },
         Registrations : [ registrations ]
-    }
+    } , { timestamps : true }
 )
 const EVENTS = mongoose.model( "events" , Schema )
 
