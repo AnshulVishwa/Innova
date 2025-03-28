@@ -34,6 +34,12 @@ async function handleGetAllEvents( req , res ) {
     else return res.json({msg : "Got It" , events : result})
 }
 
+async function handleGetSpecificEvent( req , res ) {
+    if( !req.query.username || !req.params.specificEvent ) return res.json({msg : "Body is required"})
+    const 
+    const result = EVENTS.findOne( { req.body. } )
+}
+
 module.exports = {
     handleAddEvent,
     handleGetAllEvents
